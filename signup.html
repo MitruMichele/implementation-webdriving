@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/styles/toast.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="logo">
+        <a href="/index.html"><img src="/image/LOGO .jpg" alt="" /></a>
+      </div>
+
+      <form id="signupForm">
+        <div class="wrapper">
+          <div class="form-group">
+            <label for="first-name">FIrst Name:</label>
+            <input type="text" id="first-name" name="first-name" />
+            <div id="firstNameError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" />
+            <div id="lastNameError" class="error-message"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <div id="emailError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" />
+          <div id="phoneError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="on"
+          />
+          <div id="passwordError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="password-confirm">Confirm Password:</label>
+          <input
+            type="password"
+            id="password-confirm"
+            name="password-confirm"
+            autocomplete="on"
+          />
+          <div id="passwordConfirmError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <div class="wrapper">
+            <input type="checkbox" id="privacy" />
+            <p class="t&c">Check to comply with out terms and conditions</p>
+          </div>
+          <div id="privacyError" class="error-message"></div>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div id="toast-container"></div>
+      </form>
+      <p class="action">
+        Already have an account? <a href="/pages/login.html">log in here</a>
+      </p>
+    </div>
+    <script type="module" src="/js/toast.js"></script>
+    <script type="module" src="/js/signup.js"></script>
+  </body>
+</html>

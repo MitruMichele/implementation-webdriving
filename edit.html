@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renew License</title>
+    <link rel="stylesheet" href="/styles/top-bar.css" />
+    <link rel="stylesheet" href="/styles/toast.css" />
+    <link rel="stylesheet" href="/styles/new-license-form.css" />
+    <link rel="stylesheet" href="/styles/edit.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top bar -->
+    <section class="top-bar">
+      <div class="logo">CamLicense</div>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="signinbtn">Sign in</button>
+      </div>
+    </section>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="/index.html" class="nav-item">Home</a>
+        <div class="nav-item">
+          <span>DL Application</span>
+          <ul class="submenu">
+            <li id="openModal"><a href="#">New Driver's License</a></li>
+            <li><a href="#">Renew Driver's License</a></li>
+          </ul>
+        </div>
+        <a href="/pages/edit.html" class="nav-item">Renew Application</a>
+        <a href="/pages/aknowledgement.html" class="nav-item"
+          >Acknowledgement slip</a
+        >
+        <a href="/pages/faq.html" class="nav-item">FAQ</a>
+        <a href="/pages/contact.html" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Sub Hero -->
+    <section class="cars"></section>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Do you have an existing Motor Cycle Drivers License?</p>
+        <div class="note">
+          <p>Note:</p>
+          <p>
+            You are REQUIRED to provide correct information for smooth biometric
+            capture process.
+          </p>
+        </div>
+        <hr />
+        <button id="yesBtn">Yes, I have an existing license</button>
+        <button id="noBtn">No, I don't have any license</button>
+      </div>
+    </div>
+
+    <form action="" id="edit-form">
+      <div>
+        <h3>Renewal of Driver's License</h3>
+        <p>Renewal of Driver's License Application</p>
+      </div>
+      <fieldset>
+        <legend>Search</legend>
+        <div class="wrapper">
+          <div class="radio-group">
+            <input type="radio" name="licenseId" id="licenseId" checked />
+            <span for="licenseId">By License ID</span>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="form-group">
+            <label for="license-number"
+              >Driver's License Number <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="license-number"
+              name="license-number"
+              placeholder="license number"
+            />
+            <div id="licenseError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="date-of-birth"
+              >Date of birth <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="date-of-birth"
+              name="date-of-birth"
+              placeholder="Date of birth"
+            />
+            <div id="DOBError" class="error-message"></div>
+          </div>
+        </div>
+        <button id="submitBtn" type="submit">Apply Change</button>
+        <div id="toast-container"></div>
+      </fieldset>
+    </form>
+    <script src="/js/nav.js" type="module"></script>
+    <script type="module" src="/js/toast.js"></script>
+    <script
+      type="module"
+      src="/js/edit.js
+    "
+    ></script>
+    <script type="module" src="/js/toast.js"></script>
+  </body>
+</html>

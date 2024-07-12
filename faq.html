@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="/styles/top-bar.css" />
+    <link rel="stylesheet" href="/styles/toast.css" />
+    <link rel="stylesheet" href="/styles/faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top bar -->
+    <section class="top-bar">
+      <div class="logo">CamLicense</div>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="signinbtn">Sign in</button>
+      </div>
+    </section>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="/index.html" class="nav-item">Home</a>
+        <div class="nav-item">
+          <span>DL Application</span>
+          <ul class="submenu">
+            <li id="openModal"><a href="#">New Driver's License</a></li>
+            <li><a href="/pages/edit.html">Renew Driver's License</a></li>
+          </ul>
+        </div>
+        <a href="/pages/edit.html" class="nav-item">Renew Application</a>
+        <a href="/pages/aknowledgement.html" class="nav-item"
+          >Acknowledgment slip</a
+        >
+        <a href="/pages/faq.html" class="nav-item">FAQ</a>
+        <a href="/pages/contact.html" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Sub Hero -->
+    <section class="cars"></section>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Do you have an existing Motor Cycle Drivers License?</p>
+        <div class="note">
+          <p>Note:</p>
+          <p>
+            You are REQUIRED to provide correct information for smooth biometric
+            capture process.
+          </p>
+        </div>
+        <hr />
+        <button id="yesBtn">Yes, I have an existing license</button>
+        <button id="noBtn">No, I don't have any license</button>
+      </div>
+    </div>
+    <div class="container_div">
+      <h1>FAQ</h1>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-title">How can I apply for a new driving license?</div>
+          <div class="accordion-content">
+
+
+To apply for a new driving license, you can visit our application page, fill out the required forms, upload necessary documents, 
+and pay the applicable fees online. Once your application is submitted, you will be scheduled for a driving test. 
+Detailed instructions and requirements are available on our 'How to Apply' section.
+
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">What documents do I need to provide for a driving license application?</div>
+          <div class="accordion-content">
+            The required documents typically include proof of identity (e.g., passport or national ID),
+            proof of residence (e.g., utility bill or bank statement), a completed application form, a passport-sized photograph, and a medical certificate (if applicable). Please check our 'Required Documents' 
+            section for a comprehensive list and specific details.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">How can I renew my driving license?</div>
+          <div class="accordion-content">
+            To renew your driving license, you can log in to your account on our website, navigate to the 'Renew License' section, 
+            fill out the renewal form, and upload any required documents. You will also need to pay the renewal fee. Once processed, your new license will be mailed to you. Renewal requirements and instructions are available on our 'Renewal Process' page.
+
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">How can I check the status of my driving license application?</div>
+          <div class="accordion-content">
+            You can check the status of your driving license application by logging into your account on our website and visiting the 'Application Status' page.
+            Enter your application reference number to view the current status. We also send email notifications to keep you updated on the progress of your application.
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Driver License Obtaining.</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach(function (item) {
+          item
+            .querySelector(".accordion-title")
+            .addEventListener("click", function () {
+              // Toggle the accordion content
+              item.querySelector(".accordion-content").classList.toggle("show");
+            });
+        });
+      });
+    </script>
+    <script src="/js/nav.js" type="module"></script>
+  </body>
+</html>

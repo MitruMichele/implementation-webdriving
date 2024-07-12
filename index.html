@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver License Application</title>
+    <link rel="stylesheet" href="styles/top-bar.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top bar -->
+    <section class="top-bar">
+      <div class="logo"><img src="/image/LOGO .jpg" alt="">REPUBLIC OF CAMEROON
+        MINISTRY OF TRANSPORTATION</div>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +2373012345678
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +2374012345678
+          </div>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="signinbtn">Sign in</button>
+      </div>
+    </section>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="/index.html" class="nav-item">Home</a>
+        <div class="nav-item">
+          <span>DL Application</span>
+          <ul class="submenu">
+            <li id="openModal"><a href="#">New Driver's License</a></li>
+            <li><a href="/pages/edit.html">Renew Driver's License</a></li>
+          </ul>
+        </div>
+        <a href="/pages/edit.html" class="nav-item">Renew Application</a>
+        <a href="/pages/aknowledgement.html" class="nav-item"
+          >Acknowledgment slip</a
+        >
+        <a href="/pages/faq.html" class="nav-item">FAQ</a>
+        <a href="/pages/contact.html" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Sub Hero -->
+    <section class="cars"></section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="info">
+        <div class="steps">
+          <div class="step-item">Apply New</div>
+          <div class="step-item">Renew</div>
+          <div class="step-item">Reissue</div>
+        </div>
+        <div class="detail"></div>
+      </div>
+
+      <div class="other-services">
+        <h3>Our Services</h3>
+        <a href="/pages/new-license-form.html">New Application Form</a>
+        <div class="line"></div>
+        <a href="/pages/edit.html">Renew Application Form</a>
+        <div class="line"></div>
+        <a href="/pages/aknowledgement.html">Print Acknowledgement Slip</a>
+        <div class="line"></div>
+        <a href="/pages/faq.html">Frequently Asked Questions</a>
+        <div class="line"></div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Do you have an existing Motor Cycle Drivers License?</p>
+        <div class="note">
+          <p>Note:</p>
+          <p>
+            You are REQUIRED to provide correct information for smooth biometric
+            capture process.
+          </p>
+        </div>
+        <hr />
+        <button id="yesBtn">Yes, I have an existing license</button>
+        <button id="noBtn">No, I don't have any license</button>
+      </div>
+    </div>
+
+    <!-- license process -->
+    <section class="license-process">
+      <h3>Driver's License Process</h3>
+      <div class="cards">
+        <div class="card">
+          <span>1</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>Complete the driver's license application form online.</p>
+        </div>
+        <div class="card">
+          <span>2</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>Visit VIO for driving test.</p>
+        </div>
+        <div class="card">
+          <span>3</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>Pay the license fee online or at the Bank.</p>
+        </div>
+        <div class="card">
+          <span>4</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>Confirm payment at State BIR Office.</p>
+        </div>
+        <div class="card">
+          <span>5</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>
+            Proceed to the FRSC Officer at the DLC for biometric data capture.
+          </p>
+        </div>
+        <div class="card">
+          <span>6</span>
+          <i class="fa-solid fa-laptop icon"></i>
+          <p>
+            Visit your DLC/MLA/VIO and present your application form or
+            temporary card to pick up your original license card.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Driver License Obtaining.</p>
+      </div>
+    </footer>
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

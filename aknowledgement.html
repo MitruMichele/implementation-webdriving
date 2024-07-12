@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acknowledgement Slip</title>
+    <link rel="stylesheet" href="../styles/top-bar.css" />
+    <link rel="stylesheet" href="/styles/aknowledgement.css" />
+      <!-- JsPDF & Html2Pdf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+  <body>
+    <!-- Top bar -->
+    <section class="top-bar">
+      <div class="logo">CamLicense</div>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="signinbtn">Sign in</button>
+      </div>
+    </section>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="/index.html" class="nav-item">Home</a>
+        <div class="nav-item">
+          <span>DL Application</span>
+          <ul class="submenu">
+            <li id="openModal"><a href="#">New Driver's License</a></li>
+            <li><a href="/pages/edit.html">Renew Driver's License</a></li>
+          </ul>
+        </div>
+       <a href="/pages/edit.html" class="nav-item">Renew Application</a>
+        <a href="/pages/aknowledgement.html" class="nav-item">Acknowledgmnet slip</a>
+        <a href="/pages/faq.html" class="nav-item">FAQ</a>
+        <a href="/pages/contact.html" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Sub Hero -->
+    <section class="cars"></section>
+         <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Do you have an existing Motor Cycle Drivers Licence?</p>
+        <div class="note">
+          <p>Note:</p>
+          <p>
+            You are REQUIRED to provide correct information for smooth biometric
+            capture process.
+          </p>
+        </div>
+        <hr />
+        <button id="yesBtn">Yes, I have an existing licence</button>
+        <button id="noBtn">No, I don't have any licence</button>
+      </div>
+    </div>
+      <main>
+        <div class="container_div">
+            <div class="slip">
+              <header>
+                <h1>Acknowledgement Slip</h1>
+              </header>
+              
+              <div class="content">
+                <p>
+                  This is to certify that
+                  <span class="user-name">Biyita michele laure</span> has presented an
+                  original driver's license with
+                  <span class="user-name">Driver's License ID 123456789</span>, issued
+                  by a registered body, as proof of identification. The authenticity
+                  of the provided document has been verified by
+                  <span class="org-name">CamLicense</span> as per our standard
+                  procedures.
+                </p>
+                <p>
+                  Should you require any further information or clarification
+                  regarding this matter, please feel free to contact us at
+                  <span class="support">support@camlicense.org</span>.
+                </p>
+              </div>
+              <div class="contact">
+                <p style="font-style: italic">
+                  Chief Executive Director Ballam Adamu
+                </p>
+                <p style="font-style: italic">+2379119073498</p>
+              </div>
+          </div>
+          <button class="download">download slip</button>
+        </div>
+      </main>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Driver License Obtaining Copyright CamLicense.</p>
+      </div>
+    </footer>
+<script src="/js/nav.js" type="module"></script>
+    <script type="module" src="/js/aknowledgement.js"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container_div {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  min-height: 60vh;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-title {
+  background-color: #f9f9f9;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 15px;
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}

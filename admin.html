@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="/styles/toast.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="topbar">
+        <button class="backBtn">Go Home</button>
+        <div class="greeting">
+          <h2>Welcome Back</h2>
+          <span class="userName" style="font-size: 30px"></span>
+        </div>
+        <button class="logoutBtn">Logout</button>
+      </div>
+      <div class="main-container">
+        <section class="actions">
+          <h2>Dashboard</h2>
+
+          <span class="sidebar-btn" data-table="usersTable" id="usersTableBtn"
+            >View Users</span
+          >
+
+          <span
+            class="sidebar-btn"
+            data-table="licenseTable"
+            id="licenseTableBtn"
+            >View License</span
+          >
+        </section>
+
+        <div class="content">
+          <!-- TABLES -->
+          <div id="usersTable" class="table-container" style="display: none">
+            <table></table>
+          </div>
+
+          <div id="licenseTable" class="table-container" style="display: none">
+            <table></table>
+          </div>
+        </div>
+        <div id="toast-container"></div>
+      </div>
+    </main>
+    <!-- Email Js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "RnS079-LL-hPHvdrg",
+        });
+      })();
+    </script>
+    <script type="module" src="/js/toast.js"></script>
+    <script type="module" src="../js/admin.js"></script>
+  </body>
+</html>

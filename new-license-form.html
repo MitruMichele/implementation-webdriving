@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New License Form</title>
+    <link rel="stylesheet" href="/styles/top-bar.css" />
+    <link rel="stylesheet" href="/styles/toast.css">
+    <link rel="stylesheet" href="/styles/new-license-form.css" />
+      <!-- JsPDF & Html2Pdf -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+  <body>
+    <!-- Top bar -->
+    <section class="top-bar">
+      <div class="logo">CamLicense</div>
+      <div class="wrapper">
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-phone"></i> +23747012345678
+          </div>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="signinbtn">Sign in</button>
+      </div>
+    </section>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <a href="/index.html" class="nav-item">Home</a>
+        <div class="nav-item">
+          <span>DL Application</span>
+          <ul class="submenu">
+            <li id="openModal"><a href="#">New Driver's License</a></li>
+            <li><a href="/pages/edit.html">Renew Driver's License</a></li>
+          </ul>
+        </div>
+        <a href="/pages/edit.html" class="nav-item">Renew Application</a>
+        <a href="/pages/aknowledgement.html" class="nav-item">Acknowledgment slip</a>
+        <a href="/pages/faq.html" class="nav-item">FAQ</a>
+        <a href="/pages/contact.html" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Sub Hero -->
+    <section class="cars"></section>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Do you have an existing Motor Cycle Drivers License?</p>
+        <div class="note">
+          <p>Note:</p>
+          <p>
+            You are REQUIRED to provide correct information for smooth biometric
+            capture process.
+          </p>
+        </div>
+        <hr />
+        <button id="yesBtn">Yes, I have an existing license</button>
+        <button id="noBtn">No, I don't have any license</button>
+      </div>
+    </div>
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-form">
+      <form id="new-license-form">
+        <h3>New Driver's License Application Form</h3>
+        <fieldset>
+          <legend>Driving School Certificate</legend>
+          <div class="form-group">
+            <label for="driving-cert"
+              >Certificate Number <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="driving-cert"
+              name="driving-cert"
+              placeholder="Driving school certificate number"
+              
+            />
+            <div id="certNumberError" class="error-message"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Personal Details</legend>
+          <div class="wrapper">
+            <div class="form-group">
+              <label for="first-name"
+                >First Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="First name"
+                
+              />
+              <div id="firstNameError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="first-name"
+                >Last Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last name"
+                
+              />
+              <div id="lastNameError" class="error-message"></div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+          <div class="form-group">
+            <label for="disability">Do you have a disability? <span class="required">*</span></label>
+            <div class="wrapper">
+              <div class="radio-group">
+                <span for="disability">Yes</span>
+                <input type="radio" name="disability" id="disability" />
+              </div>
+              <div class="radio-group">
+                <span for="no">No</span>
+                <input type="radio" name="disability" id="noDisability" />
+              </div>
+            </div>
+              <div id="disabilityError" class="error-message"></div>
+
+          </div>
+          <div class="form-group">
+            <label for="age">Are you older than 18? <span class="required">*</span></label>
+            <div class="wrapper">
+              <div class="radio-group">
+                <span>Yes</span>
+                <input type="radio" name="age" id="is-of-age" />
+              </div>
+              <div class="radio-group">
+                <span >No</span>
+                <input type="radio" name="age" id="not-of-age" />
+              </div>
+
+            </div>
+              <div id="ageError" class="error-message"></div>
+
+          </div>
+        </div>
+          <div class="form-group">
+              <label for="date-of-birth"
+                >Date of birth <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="date-of-birth"
+                name="date-of-birth"
+                placeholder="YYYY-MM-DD"
+                
+              />
+              <div id="dateOfBirthError" class="error-message"></div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="text" id="phone" name="phone"  placeholder="Phone number" />
+            <div id="phoneError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="address">Home Address <span class="required">*</span></label>
+            <input type="text" id="address" name="address"  placeholder="Residential address" />
+            <div id="addressError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="address">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email"  placeholder="Email address" />
+            <div id="emailError" class="error-message"></div>
+          </div>
+        </fieldset>
+
+      
+        <div class="wrapper">
+          
+          <label for="password">License Duration:</label>
+          <select name="licence-duration" id="licence-duration">
+            <option value="default" disabled aria-readonly="true" selected></option>
+            <option value="2">Two years</option>
+            <option value="3">Three years</option>
+            <option value="4">Four years</option>
+            <option value="5">Five years</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <div class="wrapper">
+            <input type="checkbox" id="privacy" />
+            <p class="t&c">Check to comply with out terms and conditions <span class="required">*</span></p>
+          </div>
+          <div id="privacyError" class="error-message"></div>
+        </div>
+        <button type="submit" class="submitBtn">Submit Application</button>
+        <div id="toast-container"></div>
+      </form>
+      <div class="donwload-container">
+        <button id="download-form">Download Form</button>
+
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Driver License Obtaining.</p>
+      </div>
+    </footer>
+    <!-- Email Js -->
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "vWnELDQfu7JVjvhmQ",
+        });
+    })();
+    </script>
+  
+    <!--Custom  -->
+<script src="/js/nav.js" type="module"></script>
+    <script type="module" src="/js/toast.js"></script>
+    <script type="module" src="/js/new-license-form.js"></script>
+  </body>
+</html>
